@@ -322,7 +322,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 14px; }
+  font-size: 13px; }
 
 body {
   font-family: 'Futura Book' ,sans-serif; }
@@ -524,3 +524,7 @@ body {
   .title {
     font-size: 1.64rem;
     line-height: 132.83%; } }
+
+@media screen and (max-height: 520px) {
+  .hero__scroll-down {
+    display: none; } }
