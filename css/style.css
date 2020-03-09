@@ -456,9 +456,11 @@ body {
   .hero__text {
     max-width: 36rem;
     font-size: 1.57rem;
-    line-height: 30px; }
+    line-height: 2.14rem; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500; }
 
 .instagram {
   background-color: #131313; }
@@ -482,7 +484,8 @@ body {
   font-family: 'Yeseva One', cursive;
   font-size: 2.85rem;
   line-height: 3.785rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: normal; }
   .title--primary {
     color: #E3B873; }
 
