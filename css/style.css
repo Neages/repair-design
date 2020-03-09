@@ -322,7 +322,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 13px; }
+  font-size: 12px; }
 
 body {
   font-family: 'Futura Book' ,sans-serif; }
@@ -344,10 +344,11 @@ body {
     background-color: #E3B873; }
 
 .button {
-  padding: 14px 20px;
+  padding: 13px 15px;
   border: none;
   color: #fff;
-  border-radius: 2px; }
+  border-radius: 2px;
+  text-transform: uppercase; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -387,6 +388,7 @@ body {
   text-transform: uppercase; }
 
 .nav__item {
+  font-size: 11px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -399,7 +401,12 @@ body {
   color: #E3B873; }
 
 .contacts__phone {
+  font-size: 12px;
   margin-right: 45px; }
+
+.contacts__button {
+  font-size: 11px;
+  padding: 10px 18px; }
 
 .hero {
   display: flex;
@@ -452,15 +459,23 @@ body {
   .hero__content {
     position: relative;
     margin-left: 4.28rem;
-    max-width: 47.85rem; }
+    max-width: 43.85rem; }
   .hero__text {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 35px;
     max-width: 36rem;
-    font-size: 1.57rem;
-    line-height: 2.14rem; }
+    font-size: 1.47rem;
+    font-weight: 200;
+    line-height: 2rem; }
   .hero__button {
-    margin-right: 20px;
-    font-size: 15px;
-    font-weight: 500; }
+    padding: 13px 21px;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 15px; }
+    .hero__button--outline {
+      padding: 12px 35px; }
 
 .instagram {
   background-color: #131313; }
@@ -482,8 +497,8 @@ body {
 .title {
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 2.85rem;
-  line-height: 3.785rem;
+  font-size: 2.65rem;
+  line-height: 3.585rem;
   text-transform: uppercase;
   font-weight: normal; }
   .title--primary {
@@ -491,7 +506,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 12px; }
+    font-size: 10px; }
   .nav__item {
     margin-right: 2rem; } }
 
