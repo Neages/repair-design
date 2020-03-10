@@ -411,10 +411,10 @@ body {
 .hero {
   display: flex;
   position: relative;
-  padding-top: 92px;
+  margin-top: 80px;
   background: #131313 url(../../img/hero-bg.jpg) no-repeat center;
   background-size: cover;
-  height: 100vh;
+  height: 95vh;
   color: #fff; }
   .hero::before {
     content: '';
