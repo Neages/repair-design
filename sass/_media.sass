@@ -5,6 +5,8 @@
     &__item
       margin-right: 2rem
 @media screen and ( max-width: 997px  )
+  html
+    font-size: 10px
   .hero
     &__content
       margin-left: 0
@@ -12,6 +14,16 @@
     display: none
   .instagram
     display: none
+@media screen and ( max-width: 760px)
+ .row
+   flex-direction: column
+   align-items: center
+ .types
+  &__card
+    margin-bottom: 4rem
+  .card
+    &__text
+      margin-left: 0
 
 @media screen and ( max-width: 576px)
   .contacts
@@ -36,6 +48,7 @@
     &__scroll-down
       display: none
   .title
+    max-width: 25rem
     font-size: 2.2rem
     line-height: 132.83%
   

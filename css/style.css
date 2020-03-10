@@ -327,21 +327,25 @@ html {
 body {
   font-family: 'Futura Book' ,sans-serif; }
 
-.section-title__heading {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
+img {
+  max-width: 100%; }
 
-.section-title__image {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .section-title__image::before, .section-title__image::after {
-    content: '';
-    width: 32px;
-    height: 2px;
-    margin: 0 10px;
-    background-color: #E3B873; }
+.section {
+  padding: 60px 0; }
+  .section-title__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
+  .section-title__image {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section-title__image::before, .section-title__image::after {
+      content: '';
+      width: 32px;
+      height: 2px;
+      margin: 0 10px;
+      background-color: #E3B873; }
 
 .button {
   padding: 13px 15px;
@@ -504,6 +508,54 @@ body {
   .title--primary {
     color: #E3B873; }
 
+.types__section-title {
+  margin-bottom: 1rem; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  margin: 0 auto;
+  margin-top: -8rem;
+  padding: 1.79rem 2.14rem; }
+
+.card__title {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.29rem; }
+
+.card__list {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0 0 0 1rem;
+  font-size: 1.07rem;
+  line-height: 1.79rem;
+  color: #959595; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  font-size: 1.29rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #fff;
+  padding: 1em 1.2em;
+  font-weight: normal; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -511,12 +563,23 @@ body {
     margin-right: 2rem; } }
 
 @media screen and (max-width: 997px) {
+  html {
+    font-size: 10px; }
   .hero__content {
     margin-left: 0; }
   .nav {
     display: none; }
   .instagram {
     display: none; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 4rem; }
+  .types .card__text {
+    margin-left: 0; } }
 
 @media screen and (max-width: 576px) {
   .contacts__button {
@@ -539,6 +602,7 @@ body {
   .hero__scroll-down {
     display: none; }
   .title {
+    max-width: 25rem;
     font-size: 2.2rem;
     line-height: 132.83%; } }
 
