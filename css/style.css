@@ -322,7 +322,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 12px; }
+  font-size: 14px; }
 
 body {
   font-family: 'Futura Book' ,sans-serif; }
@@ -388,7 +388,7 @@ body {
   text-transform: uppercase; }
 
 .nav__item {
-  font-size: 11px;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -411,10 +411,10 @@ body {
 .hero {
   display: flex;
   position: relative;
-  margin-top: 80px;
+  padding-top: 80px;
   background: #131313 url(../../img/hero-bg.jpg) no-repeat center;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   color: #fff; }
   .hero::before {
     content: '';
@@ -506,7 +506,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 10px; }
+    font-size: 12px; }
   .nav__item {
     margin-right: 2rem; } }
 
@@ -524,13 +524,12 @@ body {
   .contacts__phone {
     margin: 0;
     color: #fff; }
-  .hero__content {
-    max-width: 25rem; }
   .hero__text {
     margin: 0;
     margin-top: 1.14rem;
     margin-bottom: 2.28rem;
-    font-size: 1.28rem;
+    max-width: 25rem;
+    font-size: 1.4rem;
     line-height: 135.84%; }
   .hero__button {
     display: block;
@@ -540,7 +539,7 @@ body {
   .hero__scroll-down {
     display: none; }
   .title {
-    font-size: 1.64rem;
+    font-size: 2.2rem;
     line-height: 132.83%; } }
 
 @media screen and (max-height: 520px) {
