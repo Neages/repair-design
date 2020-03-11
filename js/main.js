@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });  
     closeBtn.addEventListener('click', switchModal)
     document.addEventListener('keyup', function(event) {
-      modal.classList.remove('modal--visible');
+      if(event.keyCode===27){
+        modal.classList.remove('modal--visible');
+      }
     })
     document.addEventListener('click', function(event) {
       let x = event.target.classList[1];
