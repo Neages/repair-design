@@ -373,6 +373,22 @@ img {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+  .button__scroll-up {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 2.07rem;
+    width: 2.07rem;
+    margin: 1.5rem;
+    background: #131313 url(../img/arrow-down.svg) no-repeat center;
+    border: 1px solid #E3B873;
+    border-radius: 50%;
+    transform: rotateZ(180deg); }
+    .button__scroll-up--show {
+      opacity: 1;
+      visibility: visible; }
 
 .container {
   width: 85%;

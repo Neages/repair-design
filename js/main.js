@@ -51,6 +51,21 @@ $(document).ready(function () {
 		}
 	});
   $('.button').mouseup(function() { this.blur() });
+
+  var btn = $('.button__scroll-up');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('button__scroll-up--show');
+    } else {
+      btn.removeClass('button__scroll-up--show');
+    }
+  });
+
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
 });
 
 
