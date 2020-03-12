@@ -604,7 +604,7 @@ img {
     padding: 2.357rem 3.5rem 1.928rem;
     max-width: 36.35rem;
     color: #fff;
-    background: #131313 url("././img/lines.svg") no-repeat center; }
+    background: #131313 url("./../img/lines.svg") no-repeat center; }
   .modal__close {
     position: absolute;
     right: 0;
