@@ -694,6 +694,16 @@ img {
   bottom: 0;
   width: auto; }
 
+.goals-title__word {
+  display: flex;
+  align-items: center; }
+  .goals-title__word::after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background-color: #E3B873;
+    margin-left: 5.64rem; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
