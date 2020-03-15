@@ -332,10 +332,32 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
   .section-title__heading {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive; }
+    .section-title__heading--primary {
+      color: #E3B873; }
+  .section-title {
+    text-align: center; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 80px;
+        height: 1px;
+        background-color: #E3B873;
+        margin-left: 2rem; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.42rem; }
+    .section-title--left {
+      text-align: left; }
   .section-title__image {
     display: flex;
     align-items: center;
@@ -395,6 +417,17 @@ img {
   max-width: 1256px;
   margin: auto; }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  width: 50%; }
+
 .header {
   position: fixed;
   left: 0;
@@ -447,6 +480,15 @@ img {
   background-size: cover;
   height: 100vh;
   color: #fff; }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero::before {
     content: '';
     position: absolute;
@@ -473,6 +515,7 @@ img {
     text-decoration: none;
     left: 0;
     bottom: 0;
+    z-index: 3;
     padding: 0 3.5rem;
     min-width: 7.64rem;
     min-height: 6.92rem;
@@ -541,14 +584,6 @@ img {
 .types__section-title {
   margin-bottom: 1rem; }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; }
-
-.col {
-  flex-basis: 31%; }
-
 .card__text {
   position: relative;
   max-width: 23.6rem;
@@ -594,7 +629,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 99%;
     background-color: rgba(19, 19, 19, 0.3); }
 
 .design__section-title {
@@ -605,6 +640,59 @@ img {
   font-size: 1.42rem;
   max-width: 740px;
   color: #131313; }
+
+.projects-title__heading {
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+  line-height: 138%; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__value {
+    display: flex;
+    margin: 0;
+    margin-bottom: 0.4rem; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 2.42rem;
+    padding-bottom: 2rem; }
+  .swiper-slide__heading {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 0.64rem; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #fff; }
+
+.swiper-button-prev {
+  left: 0;
+  top: auto;
+  bottom: 0;
+  width: 3.2rem;
+  height: 1rem;
+  background: url(".././img/arrow-prev.svg") no-repeat center; }
+  .swiper-button-prev::after {
+    display: none; }
+
+.swiper-button-next {
+  left: 0;
+  top: auto;
+  bottom: 0;
+  width: 3.2rem;
+  height: 1rem;
+  background: url(".././img/arrow-next.svg") no-repeat center; }
+  .swiper-button-next::after {
+    display: none; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+  width: auto; }
 
 .modal {
   opacity: 0;
