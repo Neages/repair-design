@@ -7,13 +7,14 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <div class="menu">
+      <div class="menu wow fadeInLeft">
         <div class="logo menu__logo">repair design project</div>
         <nav class="nav">
           <a href="#" class="nav__item">главная</a>
@@ -36,10 +37,10 @@
   <main>
     <section class="hero">
       <div class="instagram hero__instagram">
-        <a href="#" class="instagram__link">Instagram</a>
+        <a href="#" class="instagram__link wow fadeIn">Instagram</a>
       </div>
       <div class="container">
-        <div class="hero__content">
+        <div class="hero__content wow fadeInRight">
           <h1 class="title hero__title">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-На-Дону</span></h1>
           <p class="hero__text">
             Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости
@@ -53,7 +54,7 @@
       </div>
       <!-- /.container -->
 
-      <a href="#" class="hero__scroll-down">листайте вниз</a>
+      <a href="#" class="hero__scroll-down wow fadeIn">листайте вниз</a>
       <button class=" button button__scroll-up"></button>
     </section>
     <!-- /.hero -->
@@ -135,7 +136,7 @@
               <div class="swiper-button-next"></div>
             </div>
           </div>
-          <div class="col-50">
+          <div class="col-50 wow fadeIn">
             <!-- Slider main container -->
             <div class="swiper-container">
               <!-- Additional required wrapper -->
@@ -158,12 +159,34 @@
 
     <section class="control section">
       <div class="container">
-        <div class="secton-title">
+        <div class="secton-title control__section-title section-title--light">
           <h2 class="section-title__heading">Онлайн контроль</h2>
-          <div class="section-title__image">
+          <div class="section-title__image ">
             <img src="././img/video.svg" alt="Онлайн контроль">
           </div>
         </div>
+
+        <div class="control__video video wow fadeIn">
+          <img src="img/play-icon.svg" alt="" class="play video__play">
+        </div>
+
+        <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+        <form action="#" class="form control__form">
+          <div class="control__input-group">
+            <ladel for="user_name" class="label control__label">Имя</ladel>
+          <input type="text" class="input control__input" id="user_name" placeholder="Как вас зовут:">
+          </div>
+          <div class="control__input-group">
+            <ladel for="user_phone" class="label control__label">Телефон</ladel>
+          <input type="tel" class="input control__input" id="user_phone" placeholder="Ваш номер телефона:">
+          </div>
+          <button class="button button--primary control__button">Отправить</button>
+            <div class="policy control__policy">
+              <input type="checkbox" class="policy__checkbox" id="control__checkbox">
+              <label for="control__checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+            </div>
+        </form>
+        <!-- /.control__text -->
       </div>
     </section>
     <!-- /.control section -->
@@ -177,7 +200,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <img src="././img/types/type-1.jpg" class="card__image" alt="">
               <div class="card__text">
@@ -195,7 +218,7 @@
               </div>
             </div>
           </div>
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <img src="././img/types/type-2.jpg" class="card__image" alt="">
               <div class="card__text">
@@ -213,7 +236,7 @@
               </div>
             </div>
           </div>
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <img src="././img/types/type-3.jpg" class="card__image" alt="">
               <div class="card__text">
@@ -249,7 +272,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <div class="card__image card__image--darken">
                 <img src="././img/design/design-1.jpg" alt="">
@@ -266,7 +289,7 @@
               </div>
             </div>
           </div>
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <div class="card__image card__image--darken">
                 <img src="././img/design/design-2.jpg" alt="">
@@ -286,7 +309,7 @@
               </div>
             </div>
           </div>
-          <div class="col-30">
+          <div class="col-30 wow fadeIn">
             <div class="card types__card">
               <div class="card__image card__image--darken">
                 <img src="././img/design/design-3.jpg" alt="">
@@ -314,6 +337,7 @@
         </div>
       </div>
     </section>
+    <!--design-->
 
     <section class="section goals">
       <div class="container">
@@ -356,8 +380,11 @@
     </div>
     <!-- /.modal-dialog -->
   </div>
+  <!--modal-->
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
