@@ -441,6 +441,12 @@ img {
   .policy__label--center {
     justify-content: center; }
 
+label.invalid {
+  color: #d53a2c; }
+
+input.invalid {
+  border-bottom: 1px solid #d52c2c; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -894,7 +900,9 @@ img {
   .modal--visible {
     opacity: 1;
     visibility: visible; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.42rem; }
 
 .form__input {

@@ -91,6 +91,100 @@ $(document).ready(function () {
 
     new WOW().init();
 
+    //Валидация формы
+
+    $('.modal__form').validate({
+      rules: {
+        // simple rule, converted to {required:true}
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: 'required',
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        }
+      },
+      errorClass: "invalid",
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя не короче 2 букв",
+          maxlength: "Имя не длиннее 15 букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+        required: "Email обязательно",
+        email: "Введите в формате: name@domain.com"
+        }
+      }
+    });
+    $('.footer__form').validate({
+      rules: {
+        // simple rule, converted to {required:true}
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: 'required',
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        }
+      },
+      errorClass: "invalid",
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя не короче 2 букв",
+          maxlength: "Имя не длиннее 15 букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+        required: "Email обязательно",
+        email: "Введите в формате: name@domain.com"
+        }
+      }
+    });
+    $('.control__form').validate({
+      rules: {
+        // simple rule, converted to {required:true}
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: 'required',
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        }
+      },
+      errorClass: "invalid",
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя не короче 2 букв",
+          maxlength: "Имя не длиннее 15 букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+        required: "Email обязательно",
+        email: "Введите в формате: name@domain.com"
+        }
+      }
+    });
+
+    //Маска для телефона
+
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+
 });
 
 
