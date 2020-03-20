@@ -808,6 +808,10 @@ input.invalid {
   background: #181818 url("../img/footer-bg.jpg") no-repeat center;
   background-size: cover;
   padding-top: 3rem; }
+  .footer__map {
+    max-width: 66.07rem;
+    margin: auto;
+    margin-bottom: 4.714rem; }
   .footer__menu {
     background-color: #131313;
     padding: 3.57rem 0; }
