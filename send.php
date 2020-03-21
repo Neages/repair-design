@@ -37,14 +37,19 @@ try {
         if(empty(${userQuestion})){
             $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Заявка на онлайн контроль";
         } else {
-        $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
+        $mail->Body   = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
         }
     } ;
     
    
-    $mail->send();
+    if ($mail->send()) {
+        echo "ok";
+    } else {
+        echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
     
-    header('Location: thanks.html');
+    
+    
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }

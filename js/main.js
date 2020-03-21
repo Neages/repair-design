@@ -94,6 +94,7 @@ $(document).ready(function () {
     //Валидация формы
 
     $('.modal__form').validate({
+      errorClass: "invalid",
       rules: {
         // simple rule, converted to {required:true}
         userName: {
@@ -108,7 +109,6 @@ $(document).ready(function () {
           email: true
         }
       },
-      errorClass: "invalid",
       messages: {
         userName: {
           required: "Имя обязательно",
@@ -120,8 +120,22 @@ $(document).ready(function () {
         required: "Email обязательно",
         email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+          }
+        });
       }
     });
+    //И снова здарова
+    
     $('.footer__form').validate({
       rules: {
         // simple rule, converted to {required:true}
@@ -149,6 +163,17 @@ $(document).ready(function () {
         required: "Email обязательно",
         email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+          }
+        });
       }
     });
     $('.control__form').validate({
@@ -178,6 +203,17 @@ $(document).ready(function () {
         required: "Email обязательно",
         email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+          }
+        });
       }
     });
 
