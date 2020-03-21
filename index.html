@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
@@ -171,8 +172,8 @@
         </div>
 
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="#" class="form control__form">
-          <div class="control__input-group">
+        <form action="send.php" class="form control__form" method="POST" charset="utf-8"> 
+        <div class="control__input-group">
             <ladel for="user_name" class="label control__label">Имя</ladel>
             <input type="text" name="userName" class="input control__input" id="user_name" placeholder="Как вас зовут:">
           </div>
@@ -345,7 +346,7 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>  
-        <form action="#" class="megaForm footer__form">
+        <form action="send.php" class="megaForm footer__form" method="POST" charset="utf-8">
           <div class="input-group footer__input-group">
             <ladel for="user_name" class="label label--light">Имя</ladel>
             <input type="text" name="userName" class="input form__input footer__input" id="user_name" placeholder="Как вас зовут:">
@@ -356,7 +357,7 @@
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <ladel for="user_question" class="label label--light">Вопрос</ladel>
-            <input type="text" name="userEmail" class="input form__input footer__input" id="user_question" placeholder="Я хочу спросить:">
+            <input type="text" name="userQuestion" class="input form__input footer__input" id="user_question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" class="policy__checkbox" id="footer__checkbox">
@@ -399,7 +400,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-      <form action="send.php" method="POST" class="megaForm modal__form">
+      <form action="send.php" method="POST" class="megaForm modal__form" charset="utf-8">
         <div class="input-group modal__input-group">
           <ladel for="user_name" class="label form__label label--light">Имя</ladel>
           <input type="text" name="userName" class="input form__input modal__input" id="user_name" placeholder="Как вас зовут:">
