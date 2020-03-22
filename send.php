@@ -2,8 +2,8 @@
 $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
 
 $userName = $_POST['userName'];
-$userEmail = $_POST['userName'];
-$userPhone = $_POST['userEmail'];
+$userEmail = $_POST['userEmail'];
+$userPhone = $_POST['userPhone'];
 $userQuestion = $_POST['userQuestion'];
 
 // Load Composer's autoloader
@@ -33,13 +33,13 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = "Новая заявка с сайта";
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
-    // if(!${userEmail}){
-    //     if(empty(${userQuestion})){
-    //         $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Заявка на онлайн контроль";
-    //     } else {
-    //     $mail->Body   = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
-    //     }
-    // } ;
+    if(empty(${userEmail})){
+        if(empty(${userQuestion})){
+            $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Заявка на онлайн контроль";
+        } else {
+        $mail->Body   = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
+        }
+    };
     
    
     if ($mail->send()) {

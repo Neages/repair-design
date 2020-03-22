@@ -31,10 +31,9 @@ $(document).ready(function () {
   var modal = $('.modal')
       modalBtn = $('[data-toggle=modal]');
       closeBtn = $('.modal__close');
-      success = $('.success')
+      successModal = $('.success')
       successClose = $('.success__close')
 
-console.log(success);
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -54,17 +53,17 @@ console.log(success);
   });
   
   successClose.on('click', function () {
-    success.removeClass('success--visible');
+    successModal.removeClass('success--visible');
   });
   document.addEventListener('keyup', function(event) {
     if(event.keyCode===27){
-      success.removeClass('success--visible');
+      successModal.removeClass('success--visible');
     }
   })
   $(document).mouseup(function (e){ 
     var successDialog = $('.success__dialog');
 		if (!successDialog.is(e.target) && successDialog.has(e.target).length === 0) { // и не по его дочерним элементам
-      success.removeClass('success--visible'); // скрываем его
+      successModal.removeClass('success--visible'); // скрываем его
 		}
 	});
   $('.button').mouseup(function() { this.blur() });
@@ -144,7 +143,7 @@ console.log(success);
           url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
-            success.addClass('success--visible');
+            successModal.addClass('success--visible');
             $(form)[0].reset();
             modal.removeClass('modal--visible');
           },
@@ -190,8 +189,9 @@ console.log(success);
           url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
-            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            successModal.addClass('success--visible');
             $(form)[0].reset();
+            console.log(userName);
           }
         });
       }
@@ -228,9 +228,8 @@ console.log(success);
         $.ajax({
           type: "POST",
           url: "send.php",
-          data: $(form).serialize(),
           success: function (response) {
-            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            successModal.addClass('success--visible');
             $(form)[0].reset();
           }
         });
