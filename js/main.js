@@ -228,6 +228,7 @@ $(document).ready(function () {
         $.ajax({
           type: "POST",
           url: "send.php",
+          data: $(form).serialize(),
           success: function (response) {
             successModal.addClass('success--visible');
             $(form)[0].reset();
