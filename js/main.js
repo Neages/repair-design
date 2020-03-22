@@ -31,8 +31,10 @@ $(document).ready(function () {
   var modal = $('.modal')
       modalBtn = $('[data-toggle=modal]');
       closeBtn = $('.modal__close');
+      success = $('.success')
+      successClose = $('.success__close')
 
-
+console.log(success);
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -48,6 +50,21 @@ $(document).ready(function () {
     var modalDialog = $('.modal__dialog');
 		if (!modalDialog.is(e.target) && modalDialog.has(e.target).length === 0) { // и не по его дочерним элементам
       modal.removeClass('modal--visible'); // скрываем его
+		}
+  });
+  
+  successClose.on('click', function () {
+    success.removeClass('success--visible');
+  });
+  document.addEventListener('keyup', function(event) {
+    if(event.keyCode===27){
+      success.removeClass('success--visible');
+    }
+  })
+  $(document).mouseup(function (e){ 
+    var successDialog = $('.success__dialog');
+		if (!successDialog.is(e.target) && successDialog.has(e.target).length === 0) { // и не по его дочерним элементам
+      success.removeClass('success--visible'); // скрываем его
 		}
 	});
   $('.button').mouseup(function() { this.blur() });
@@ -127,10 +144,13 @@ $(document).ready(function () {
           url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
-            alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            success.addClass('success--visible');
             $(form)[0].reset();
             modal.removeClass('modal--visible');
-          }
+          },
+          error: function (response) {
+            console.log('Ошибка запроса ' + response);
+            }
         });
       }
     });

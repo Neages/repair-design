@@ -1,15 +1,15 @@
 <?php
+$headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
+
 $userName = $_POST['userName'];
-$userEmail = $_POST['userEmail'];
-$userPhone = $_POST['userPhone'];
+$userEmail = $_POST['userName'];
+$userPhone = $_POST['userEmail'];
 $userQuestion = $_POST['userQuestion'];
-$headers = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
 // Load Composer's autoloader
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require_once('phpMailer/PHPMailer.php');
+require_once ('phpMailer/SMTP.php');
+require_once ('phpMailer/Exception.php');
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -33,13 +33,13 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = "Новая заявка с сайта";
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
-    if(empty(${userEmail})){
-        if(empty(${userQuestion})){
-            $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Заявка на онлайн контроль";
-        } else {
-        $mail->Body   = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
-        }
-    } ;
+    // if(!${userEmail}){
+    //     if(empty(${userQuestion})){
+    //         $mail->Body    = "Имя пользователя: ${userName}, телефон: ${userPhone}. Заявка на онлайн контроль";
+    //     } else {
+    //     $mail->Body   = "Имя пользователя: ${userName}, телефон: ${userPhone}. Вопрос: ${userQuestion}";
+    //     }
+    // } ;
     
    
     if ($mail->send()) {
